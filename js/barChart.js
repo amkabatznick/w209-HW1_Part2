@@ -3,6 +3,7 @@ function barChart(){
   var height = 400;
   var width = 400;
 
+
   var figw = width - margin.left - margin.right,
       figh = height - margin.top - margin.bottom,
       // xValue = function(d){ return d[0]; },c
@@ -11,6 +12,9 @@ function barChart(){
       yScale = d3.scaleLinear(),
       onMouseOver = function() {},
       onMouseOut = function() {};
+
+
+
 
   function chart(selection){
     selection.each(function(data){
