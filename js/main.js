@@ -3,7 +3,7 @@ var parser = d3.timeParse("%m/%d/%y %H:%M");
 var barChartClass = barChart()
     .x(function(d) {return d.key;})
     .y(function(d) {return d.value;});
-var barChartWorkouts = barChart()
+var barChartWorkouts = barChartTime()
     .x(function (d) {return d.key;})
     .y(function(d) {return d.value;});
 
@@ -26,6 +26,7 @@ d3.csv("https://raw.githubusercontent.com/amkabatznick/W209/master/AMK_Peloton.c
     //csData.classTypes = csData.dimClassType.group();
     csData.workoutNames = csData.dimWorkouts.group().reduceSum(function(d) { return d.avg_watts; });
     csData.classTypes = csData.dimClassType.group().reduceSum(function(d) { return d.avg_watts; });
+
 
 
     barChartClass.onMouseOver(function (d) {
