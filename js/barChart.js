@@ -5,7 +5,7 @@ function barChart(){
 
   var figw = width - margin.left - margin.right,
       figh = height - margin.top - margin.bottom,
-      // xValue = function(d){ return d[0]; },
+      // xValue = function(d){ return d[0]; },c
       // yValue = function(d){return d[1]; },
       xScale = d3.scaleBand().padding(0.1),
       yScale = d3.scaleLinear(),
